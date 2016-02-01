@@ -1,0 +1,1 @@
+# Liferay Maven Project Example

@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
+	<modelVersion>4.0.0</modelVersion>
+	<parent>
+    <artifactId>themes</artifactId>
+    <groupId>it.dontesta.labs.liferay.themes</groupId>
+    <version>1.0.0-SNAPSHOT</version>
+  </parent>
+	<groupId>it.dontesta.labs.liferay.themes</groupId>
+	<artifactId>theme-sample</artifactId>
+	<packaging>war</packaging>
+	<name>theme-sample Theme</name>
+	<version>1.0.0-SNAPSHOT</version>
+	<build>
+		<plugins>
+			<plugin>
+				<groupId>com.liferay.maven.plugins</groupId>
+				<artifactId>liferay-maven-plugin</artifactId>
+				<version>${liferay.maven.plugin.version}</version>
+				<executions>
+					<execution>
+						<phase>generate-sources</phase>
+						<goals>
+							<goal>theme-merge</goal>
+							<goal>build-css</goal>
+							<goal>build-thumbnail</goal>
+						</goals>
+					</execution>
+				</executions>
+				<configuration>
+					<parentTheme>${liferay.theme.parent}</parentTheme>
+					<pluginType>theme</pluginType>
+					<themeType>${liferay.theme.type}</themeType>
+				</configuration>
+			</plugin>
+		</plugins>
+	</build>
+</project>

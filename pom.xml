@@ -1,0 +1,279 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
+
+  <modelVersion>4.0.0</modelVersion>
+  <groupId>it.dontesta.labs.liferay</groupId>
+  <artifactId>liferay-amusarra-blog</artifactId>
+  <version>1.0.0-SNAPSHOT</version>
+  <packaging>pom</packaging>
+  <name>Antonio Musarra's Blog Liferay Maven Project</name>
+  <description>Liferay sample project based on Maven</description>
+  <url>http://www.dontesta.it</url>
+  <inceptionYear>2016</inceptionYear>
+  <licenses>
+    <license>
+      <name>GNU General Public License (GPLv3)</name>
+      <url>http://www.gnu.org/licenses/gpl-3.0-standalone.html</url>
+      <distribution>manual</distribution>
+    </license>
+  </licenses>
+  <organization>
+    <name>Antonio Musarra's Blog</name>
+    <url>http://www.dontesta.it</url>
+  </organization>
+  <properties>
+    <failOnViolationPmdBuild>false</failOnViolationPmdBuild>
+    <compilation.debug>false</compilation.debug>
+
+    <!-- VERSIONS -->
+    <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+    <liferay.version>6.2.10.15</liferay.version>
+    <liferay.maven.plugin.version>6.2.10.15</liferay.maven.plugin.version>
+    <vanilla-theme.version>0.0.8-SNAPSHOT</vanilla-theme.version>
+    <version.jboss-as-maven-plugin>7.7.Final</version.jboss-as-maven-plugin>
+
+    <!-- Liferay Maven Plugin properties -->
+    <!-- If need changes on this properties, overwrite on C:\Users\EITXXXX\.m2\settings.xml -->
+    <liferay.version>6.2.10.15</liferay.version>
+    <liferay.maven.plugin.version>6.2.10.15</liferay.maven.plugin.version>
+    <liferay.auto.deploy.dir>/opt/liferay-portal-6.2-ee-sp11/deploy</liferay.auto.deploy.dir>
+    <liferay.app.server.deploy.dir>/opt/liferay-portal-6.2-ee-sp11/jboss-7.1.1/standalone/deployments</liferay.app.server.deploy.dir>
+    <liferay.app.server.lib.global.dir>/opt/liferay-portal-6.2-ee-sp11/jboss-7.1.1/modules/com/liferay/portal/main</liferay.app.server.lib.global.dir>
+    <liferay.app.server.portal.dir>/opt/liferay-portal-6.2-ee-sp11/jboss-7.1.1/standalone/deployments/ROOT.war</liferay.app.server.portal.dir>
+
+    <liferay.theme.parent>_styled</liferay.theme.parent>
+    <liferay.theme.type>vm</liferay.theme.type>
+    <!--End Liferay Maven Plugin properties -->
+
+    <!-- JBoss Liferay Bundle -->
+    <jboss.deploy.hostname>10.9.12.238</jboss.deploy.hostname>
+    <jboss.deploy.port>9999</jboss.deploy.port>
+    <jboss.deploy.username>jblf</jboss.deploy.username>
+    <jboss.deploy.password>jblf</jboss.deploy.password>
+    <jboss.deploy.cli.username>jblfdeploy</jboss.deploy.cli.username>
+    <jboss.deploy.cli.password>$jblfdeploy$</jboss.deploy.cli.password>
+    <jboss.deploy.liferay.dir>/home/jblf/liferay-portal-6.2-ee-sp14/deploy</jboss.deploy.liferay.dir>
+    <!-- End JBoss Liferay Bundle -->
+
+  </properties>
+
+  <developers>
+    <developer>
+      <id>amusarra</id>
+      <name>Antonio Musarra</name>
+      <email>antonio.musarra@gmail.com</email>
+      <url>http://www.dontesta.it/blog</url>
+      <timezone>+1</timezone>
+      <roles>
+        <role>IT Senior Consultant</role>
+        <role>Senior Software Architect</role>
+        <role>Liferay Expert</role>
+      </roles>
+    </developer>
+  </developers>
+
+  <dependencyManagement>
+    <dependencies>
+      <dependency>
+        <groupId>com.liferay.portal</groupId>
+        <artifactId>portal-service</artifactId>
+        <version>${liferay.version}</version>
+        <scope>provided</scope>
+      </dependency>
+      <dependency>
+        <groupId>com.liferay.portal</groupId>
+        <artifactId>util-java</artifactId>
+        <version>${liferay.version}</version>
+        <scope>provided</scope>
+      </dependency>
+      <dependency>
+        <groupId>com.liferay.portal</groupId>
+        <artifactId>util-bridges</artifactId>
+        <version>${liferay.version}</version>
+        <scope>provided</scope>
+      </dependency>
+      <dependency>
+        <groupId>javax.portlet</groupId>
+        <artifactId>portlet-api</artifactId>
+        <version>2.0</version>
+        <scope>provided</scope>
+      </dependency>
+      <dependency>
+        <groupId>com.liferay.portal</groupId>
+        <artifactId>util-taglib</artifactId>
+        <version>${liferay.version}</version>
+        <scope>provided</scope>
+      </dependency>
+      <dependency>
+        <groupId>javax.servlet</groupId>
+        <artifactId>servlet-api</artifactId>
+        <version>2.4</version>
+        <scope>provided</scope>
+      </dependency>
+      <dependency>
+        <groupId>javax.servlet.jsp</groupId>
+        <artifactId>jsp-api</artifactId>
+        <version>2.0</version>
+        <scope>provided</scope>
+      </dependency>
+    </dependencies>
+  </dependencyManagement>
+
+  <modules>
+    <module>core</module>
+    <module>hooks</module>
+    <module>layouttpl</module>
+    <module>portlets</module>
+    <module>ext</module>
+    <module>web</module>
+    <module>themes</module>
+  </modules>
+
+  <profiles>
+    <profile>
+      <id>liferay-release</id>
+      <build>
+        <plugins>
+          <plugin>
+            <groupId>org.apache.maven.plugins</groupId>
+            <artifactId>maven-source-plugin</artifactId>
+            <version>2.4</version>
+            <executions>
+              <execution>
+                <id>attach-sources</id>
+                <goals>
+                  <goal>jar-no-fork</goal>
+                </goals>
+              </execution>
+            </executions>
+          </plugin>
+          <plugin>
+            <groupId>org.apache.maven.plugins</groupId>
+            <artifactId>maven-javadoc-plugin</artifactId>
+            <version>2.10.1</version>
+            <executions>
+              <execution>
+                <id>attach-javadocs</id>
+                <goals>
+                  <goal>jar</goal>
+                </goals>
+              </execution>
+            </executions>
+          </plugin>
+        </plugins>
+      </build>
+    </profile>
+  </profiles>
+
+  <build>
+    <plugins>
+      <plugin>
+        <groupId>com.liferay.maven.plugins</groupId>
+        <artifactId>liferay-maven-plugin</artifactId>
+        <version>${liferay.maven.plugin.version}</version>
+        <configuration>
+          <autoDeployDir>${liferay.auto.deploy.dir}</autoDeployDir>
+          <appServerDeployDir>${liferay.app.server.deploy.dir}</appServerDeployDir>
+          <appServerLibGlobalDir>${liferay.app.server.lib.global.dir}</appServerLibGlobalDir>
+          <appServerPortalDir>${liferay.app.server.portal.dir}</appServerPortalDir>
+          <liferayVersion>${liferay.version}</liferayVersion>
+        </configuration>
+      </plugin>
+      <plugin>
+        <artifactId>maven-compiler-plugin</artifactId>
+        <version>3.1</version>
+        <configuration>
+          <encoding>UTF-8</encoding>
+          <source>1.7</source>
+          <target>1.7</target>
+          <debug>${compilation.debug}</debug>
+          <debuglevel>lines,vars,source</debuglevel>
+        </configuration>
+      </plugin>
+      <plugin>
+        <artifactId>maven-resources-plugin</artifactId>
+        <version>2.6</version>
+        <configuration>
+          <encoding>UTF-8</encoding>
+        </configuration>
+      </plugin>
+      <plugin>
+        <groupId>org.apache.maven.plugins</groupId>
+        <artifactId>maven-release-plugin</artifactId>
+        <version>2.5.1</version>
+      </plugin>
+      <plugin>
+        <artifactId>maven-deploy-plugin</artifactId>
+        <version>2.8.2</version>
+        <configuration>
+          <autoVersionSubmodules>true</autoVersionSubmodules>
+          <useReleaseProfile>false</useReleaseProfile>
+          <releaseProfiles>liferay-release</releaseProfiles>
+          <altDeploymentRepository>internal.repository::default::file://${project.build.directory}/mvn-repository</altDeploymentRepository>
+        </configuration>
+      </plugin>
+      <plugin>
+        <groupId>org.apache.maven.plugins</groupId>
+        <artifactId>maven-site-plugin</artifactId>
+        <version>3.4</version>
+      </plugin>
+      <plugin>
+        <groupId>com.github.github</groupId>
+        <artifactId>site-maven-plugin</artifactId>
+        <version>0.10</version>
+        <configuration>
+          <message>Maven artifacts for ${project.version}</message>
+          <noJekyll>true</noJekyll>
+          <outputDirectory>${project.build.directory}/mvn-repository</outputDirectory>
+          <branch>refs/heads/mvn-repository</branch>
+          <includes>
+            <include>**/*</include>
+          </includes>
+          <merge>true</merge>
+          <repositoryName>${project.name}</repositoryName>
+          <repositoryOwner>amusarra</repositoryOwner>
+        </configuration>
+        <executions>
+          <!-- run site-maven-plugin's 'site' target as part of the build's normal 'deploy' phase -->
+          <execution>
+            <goals>
+              <goal>site</goal>
+            </goals>
+            <phase>deploy</phase>
+          </execution>
+        </executions>
+      </plugin>
+      <plugin>
+        <groupId>org.apache.maven.plugins</groupId>
+        <artifactId>maven-gpg-plugin</artifactId>
+        <version>1.5</version>
+        <executions>
+          <execution>
+            <id>sign-artifacts</id>
+            <phase>verify</phase>
+            <goals>
+              <goal>sign</goal>
+            </goals>
+          </execution>
+        </executions>
+      </plugin>
+    </plugins>
+  </build>
+  <distributionManagement>
+    <repository>
+      <id>internal.repository</id>
+      <name>Staging Repository</name>
+      <url>file://${project.build.directory}/mvn-repository</url>
+    </repository>
+  </distributionManagement>
+  <scm>
+    <connection>scm:git:git@github.com:amusarra/liferay-amusarra-blog.git</connection>
+    <url>scm:git:git@github.com:amusarra/liferay-amusarra-blog.git</url>
+    <developerConnection>scm:git:git@github.com:amusarra/liferay-amusarra-blog.git</developerConnection>
+    <tag>HEAD</tag>
+  </scm>
+  <issueManagement>
+    <url>https://github.com/amusarra/liferay-amusarra-blog/issues</url>
+    <system>GitHub</system>
+  </issueManagement>
+</project>
