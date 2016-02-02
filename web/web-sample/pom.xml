@@ -4,13 +4,13 @@
 	<parent>
     <artifactId>web</artifactId>
     <groupId>it.dontesta.labs.liferay.web</groupId>
-    <version>1.0.1-SNAPSHOT</version>
+    <version>1.0.1</version>
   </parent>
 	<groupId>it.dontesta.labs.liferay.web</groupId>
 	<artifactId>web-sample</artifactId>
 	<packaging>war</packaging>
 	<name>web-sample Web</name>
-	<version>1.0.1-SNAPSHOT</version>
+	<version>1.0.1</version>
 	<build>
 		<plugins>
 			<plugin>
