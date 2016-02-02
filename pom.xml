@@ -4,7 +4,7 @@
   <modelVersion>4.0.0</modelVersion>
   <groupId>it.dontesta.labs.liferay</groupId>
   <artifactId>liferay-amusarra-blog</artifactId>
-  <version>1.0.0-SNAPSHOT</version>
+  <version>1.0.0</version>
   <packaging>pom</packaging>
   <name>Antonio Musarra's Blog Liferay Maven Project</name>
   <description>Liferay sample project based on Maven</description>
@@ -270,7 +270,7 @@
     <connection>scm:git:git@github.com:amusarra/liferay-amusarra-blog.git</connection>
     <url>scm:git:git@github.com:amusarra/liferay-amusarra-blog.git</url>
     <developerConnection>scm:git:git@github.com:amusarra/liferay-amusarra-blog.git</developerConnection>
-    <tag>HEAD</tag>
+    <tag>liferay-amusarra-blog-1.0.0</tag>
   </scm>
   <issueManagement>
     <url>https://github.com/amusarra/liferay-amusarra-blog/issues</url>
