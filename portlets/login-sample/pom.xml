@@ -4,13 +4,13 @@
 	<parent>
     <artifactId>portlets</artifactId>
     <groupId>it.dontesta.labs.liferay.portlets</groupId>
-    <version>1.0.1</version>
+    <version>1.0.2-SNAPSHOT</version>
   </parent>
 	<groupId>it.dontesta.labs.liferay.portlets</groupId>
 	<artifactId>login-sample</artifactId>
 	<packaging>war</packaging>
 	<name>login-sample Portlet</name>
-	<version>1.0.1</version>
+	<version>1.0.2-SNAPSHOT</version>
 	<build>
 		<plugins>
 			<plugin>
