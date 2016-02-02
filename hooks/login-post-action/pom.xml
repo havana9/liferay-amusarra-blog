@@ -4,13 +4,13 @@
 	<parent>
     <artifactId>hooks</artifactId>
     <groupId>it.dontesta.labs.liferay.hooks</groupId>
-    <version>1.0.2-SNAPSHOT</version>
+    <version>1.0.1-SNAPSHOT</version>
   </parent>
 	<groupId>it.dontesta.labs.liferay.hooks</groupId>
 	<artifactId>login-post-action</artifactId>
 	<packaging>war</packaging>
 	<name>login-post-action Hook</name>
-	<version>1.0.2-SNAPSHOT</version>
+	<version>1.0.1-SNAPSHOT</version>
 	<build>
 		<plugins>
 			<plugin>

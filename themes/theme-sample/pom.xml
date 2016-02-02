@@ -4,13 +4,13 @@
 	<parent>
     <artifactId>themes</artifactId>
     <groupId>it.dontesta.labs.liferay.themes</groupId>
-    <version>1.0.2-SNAPSHOT</version>
+    <version>1.0.1-SNAPSHOT</version>
   </parent>
 	<groupId>it.dontesta.labs.liferay.themes</groupId>
 	<artifactId>theme-sample</artifactId>
 	<packaging>war</packaging>
 	<name>theme-sample Theme</name>
-	<version>1.0.2-SNAPSHOT</version>
+	<version>1.0.1-SNAPSHOT</version>
 	<build>
 		<plugins>
 			<plugin>

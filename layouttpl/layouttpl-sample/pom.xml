@@ -4,13 +4,13 @@
 	<parent>
     <artifactId>layouttpl</artifactId>
     <groupId>it.dontesta.labs.liferay.layouttpl</groupId>
-    <version>1.0.2-SNAPSHOT</version>
+    <version>1.0.1-SNAPSHOT</version>
   </parent>
 	<groupId>it.dontesta.labs.liferay.layouttpl</groupId>
 	<artifactId>layouttpl-sample</artifactId>
 	<packaging>war</packaging>
 	<name>layouttpl-sample Layout Template</name>
-	<version>1.0.2-SNAPSHOT</version>
+	<version>1.0.1-SNAPSHOT</version>
 	<build>
 		<plugins>
 			<plugin>
