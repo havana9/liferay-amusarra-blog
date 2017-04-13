@@ -33,10 +33,11 @@
     <version.jboss-as-maven-plugin>7.7.Final</version.jboss-as-maven-plugin>
 
     <!-- Liferay Maven Plugin properties -->
-    <liferay.auto.deploy.dir>/opt/liferay-portal-6.2-ee-sp11/deploy</liferay.auto.deploy.dir>
-    <liferay.app.server.deploy.dir>/opt/liferay-portal-6.2-ee-sp11/jboss-7.1.1/standalone/deployments</liferay.app.server.deploy.dir>
-    <liferay.app.server.lib.global.dir>/opt/liferay-portal-6.2-ee-sp11/jboss-7.1.1/modules/com/liferay/portal/main</liferay.app.server.lib.global.dir>
-    <liferay.app.server.portal.dir>/opt/liferay-portal-6.2-ee-sp11/jboss-7.1.1/standalone/deployments/ROOT.war</liferay.app.server.portal.dir>
+    <liferay.auto.deploy.dir>/opt/liferay-portal-6.2-ce-ga5/deploy</liferay.auto.deploy.dir>
+    <liferay.app.server.dir>/opt/liferay-portal-6.2-ce-ga5/tomcat-7.0.62</liferay.app.server.dir>
+    <liferay.app.server.deploy.dir>/opt/liferay-portal-6.2-ce-ga5/tomcat-7.0.62/webapps</liferay.app.server.deploy.dir>
+    <liferay.app.server.lib.global.dir>/opt/liferay-portal-6.2-ce-ga5/tomcat-7.0.62/lib/ext</liferay.app.server.lib.global.dir>
+    <liferay.app.server.portal.dir>/opt/liferay-portal-6.2-ce-ga5/tomcat-7.0.62/webapps/ROOT</liferay.app.server.portal.dir>
 
     <liferay.theme.parent>_styled</liferay.theme.parent>
     <liferay.theme.type>vm</liferay.theme.type>
