@@ -19,7 +19,7 @@
   </licenses>
   <organization>
     <name>Antonio Musarra's Blog</name>
-    <url>http://www.dontesta.it</url>
+    <url>https://www.dontesta.it</url>
   </organization>
   <properties>
     <failOnViolationPmdBuild>false</failOnViolationPmdBuild>
@@ -27,15 +27,12 @@
 
     <!-- VERSIONS -->
     <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
-    <liferay.version>6.2.10.15</liferay.version>
-    <liferay.maven.plugin.version>6.2.10.15</liferay.maven.plugin.version>
+    <liferay.version>6.2.5</liferay.version>
+    <liferay.maven.plugin.version>6.2.5</liferay.maven.plugin.version>
     <vanilla-theme.version>0.0.8-SNAPSHOT</vanilla-theme.version>
     <version.jboss-as-maven-plugin>7.7.Final</version.jboss-as-maven-plugin>
 
     <!-- Liferay Maven Plugin properties -->
-    <!-- If need changes on this properties, overwrite on C:\Users\EITXXXX\.m2\settings.xml -->
-    <liferay.version>6.2.10.15</liferay.version>
-    <liferay.maven.plugin.version>6.2.10.15</liferay.maven.plugin.version>
     <liferay.auto.deploy.dir>/opt/liferay-portal-6.2-ee-sp11/deploy</liferay.auto.deploy.dir>
     <liferay.app.server.deploy.dir>/opt/liferay-portal-6.2-ee-sp11/jboss-7.1.1/standalone/deployments</liferay.app.server.deploy.dir>
     <liferay.app.server.lib.global.dir>/opt/liferay-portal-6.2-ee-sp11/jboss-7.1.1/modules/com/liferay/portal/main</liferay.app.server.lib.global.dir>
@@ -62,7 +59,7 @@
       <id>amusarra</id>
       <name>Antonio Musarra</name>
       <email>antonio.musarra@gmail.com</email>
-      <url>http://www.dontesta.it/blog</url>
+      <url>https://www.dontesta.it/blog</url>
       <timezone>+1</timezone>
       <roles>
         <role>IT Senior Consultant</role>
